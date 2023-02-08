@@ -11,39 +11,34 @@ public class exe05 {
         Scanner sc = new Scanner(System.in);
         Random gr = new Random();
 
+        boolean presente = false;
+        int num = 0;
         int meuVetor[] = new int[6];
+
+        for (int i = 0; i < meuVetor.length; i++) {
+
+            meuVetor[i] = gr.nextInt(0, 11);
+            System.out.println(meuVetor[i]);
+        }
+
+        System.out.println("Digite um numero:");
+        num = sc.nextInt();
 
         for (int i = 0; i < 6; i++) {
 
-            int valor = gr.nextInt(1, 6);
-
-            if (i == 0) {
-
-                meuVetor[0] = valor;
-
-            } else if (i == 1) {
-
-                meuVetor[1] = valor;
-
-            } else if (i == 2) {
-
-                meuVetor[2] = valor;
-
-            } else if (i == 3) {
-
-                meuVetor[3] = valor;
-
-            } else if (i == 4) {
-
-                meuVetor[4] = valor;
-
-            } else if (i == 5) {
-
-                meuVetor[5] = valor;
-
+            if (num == meuVetor[i]) {
+                presente = true;
+                break;
             }
         }
 
+        if (presente == true) {
+
+            System.out.println("O número está presente no vetor");
+
+        } else {
+            System.out.println("O número não está presente no vetor");
+        }
         sc.close();
     }
 }
