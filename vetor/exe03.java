@@ -1,7 +1,5 @@
 package vetor;
 
-import javax.xml.transform.SourceLocator;
-
 //Crie em Java um programa que contenha um vetor com 5 posições do tipo String, mostre na tela somente os valores da primeira posição e a ultima posição.
 
 public class exe03 {

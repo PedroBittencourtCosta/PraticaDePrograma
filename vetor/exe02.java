@@ -41,5 +41,7 @@ public class exe02 {
 
         System.out.printf("as frutas sao essas: %s, %s, %s, %s, %s", frutas[0], frutas[1], frutas[2], frutas[3],
                 frutas[4]);
+
+        in.close();
     }
 }

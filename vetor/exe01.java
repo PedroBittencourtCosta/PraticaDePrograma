@@ -63,5 +63,7 @@ public class exe01 {
         System.out.printf("Os numeros são: %d - %d - %d - %d - %d - %d - %d - %d - %d - %d", vetor[0], vetor[1],
                 vetor[2], vetor[3], vetor[4], vetor[5], vetor[6], vetor[7], vetor[8], vetor[9]);
 
+        in.close();
+
     }
 }
