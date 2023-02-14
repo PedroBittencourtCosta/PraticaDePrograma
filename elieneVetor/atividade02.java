@@ -13,7 +13,8 @@ public class atividade02 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        int num = 0, primeiro = 0, razao = 0, PA = 0, PG = 0;
+        int num = 0, primeiro = 0, razao = 0, PA = 0;
+        double PG = 0;
 
         System.out.println("Innsira o valor de N:");
         num = sc.nextInt();
@@ -28,12 +29,13 @@ public class atividade02 {
             System.out.println(PA);
         }
 
+        System.out.println(" ");
         System.out.println("PA");
         System.out.println(" ");
 
-        for (int i = 0; i <= num; i++) {
+        for (int i = 1; i < num; i++) {
 
-            PG = primeiro * (razao * (i - 1));
+            PG = primeiro * Math.pow(razao, (i - 1));
             System.out.println(PG);
         }
 
