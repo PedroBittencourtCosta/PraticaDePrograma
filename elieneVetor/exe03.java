@@ -12,32 +12,34 @@ public class exe03 {
         Scanner sc = new Scanner(System.in);
 
         int vetorN[] = new int[6];
-        int maior = 0, posiMaior = 0, posiMenor = 0, menor = 0, conf = 0;
+        int posiMaior = 0, posiMenor = 0;
 
+        System.out.println("insira os numeros do seu vetor:");
         for (int i = 0; i < vetorN.length; i++) {
-            System.out.println("insira os numeros do seu vetor:");
             vetorN[i] = sc.nextInt();
 
-            if (maior < vetorN[i]) {
-                maior = vetorN[i];
-                posiMaior = i;
-            }
-
-            conf = vetorN[i];
-
-            if (menor < vetorN[i]) { // tem q arrumar essa poha.
-                menor = vetorN[i];
-                posiMenor = i;
-            }
         }
 
         System.out.println("O seu vetor ai:");
 
+        int maior = vetorN[0], menor = vetorN[0];
+
         for (int i = 0; i < vetorN.length; i++) {
+
+            if (vetorN[i] > maior) {
+                maior = vetorN[i];
+                posiMaior = i + 1;
+            }
+
+            if (vetorN[i] < menor) {
+                menor = vetorN[i];
+                posiMenor = i + 1;
+            }
             System.out.println(vetorN[i]);
         }
 
-        System.out.printf("O maior valor do vetor é: %d e está na %d posição.", maior, posiMaior);
+        System.out.printf("O maior valor do vetor é: %d e está na %d posição.",
+                maior, posiMaior);
         System.out.printf("O menor valor do vetor é: %d e está na %d posição.", menor, posiMenor);
 
         sc.close();

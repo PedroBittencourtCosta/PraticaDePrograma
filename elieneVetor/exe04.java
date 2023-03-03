@@ -1,12 +1,12 @@
 package elieneVetor;
 
+import java.util.Random;
 // Faça um programa que leia 2 vetores e armazene a soma deles
 // em um 3º vetor.
 
-import java.util.Random;
-
 public class exe04 {
     public static void main(String[] args) {
+
         Random gr = new Random();
 
         int vetA[] = new int[5];
@@ -14,6 +14,7 @@ public class exe04 {
         int vetC[] = new int[5];
 
         for (int i = 0; i < vetA.length; i++) {
+
             System.out.printf("vetor A: %d\n", vetA[i] = gr.nextInt(1, 101));
             for (int j = 0; j < i; j++) {
                 while (vetA[j] == vetA[i]) {
